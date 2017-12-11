@@ -1,0 +1,8 @@
+src/
+node_modules/
+.git
+
+.gitignore
+gulpfile.babel.js
+test.js
+.babelrc

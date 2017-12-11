@@ -1,0 +1,39 @@
+{
+  "name": "pagsegurojs",
+  "version": "1.0.0",
+  "description": "integração com sistema de pagamentos Pagseguro",
+  "keywords": ["pagseguro","promise"],
+  "bugs": {
+    "url": "https://github.com/pedroprado010/pagsegurojs/issues"
+  },
+  "main": "./build/index.js",
+  "scripts": {
+    "test": "npx babel-node ./test.js",
+    "build": "npx babel src --out-dir lib",
+    "prepublishOnly": "gulp"
+  },
+  "author": {
+    "name": "Pedro Luiz Cabral Salomon Prado",
+    "email": "pedroprado010@gmail.com",
+    "url": "https://www.facebook.com/pedro.salomon.509"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedroprado010/pagsegurojs"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "xml-js": "^1.5.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-jsmin": "^0.1.5"
+  }
+}
