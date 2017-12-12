@@ -1,7 +1,7 @@
 import convert from 'xml-js'
 import axios from 'axios'
 
-export class Pagseguro {
+export class Checkout {
   data = {items: []}
   xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
 
@@ -13,9 +13,6 @@ export class Pagseguro {
 
   setCurrency(currency='BRL') {
     this.data.currency = currency
-    if (currency !== 'BRL') {
-      console.log(CONSOLE_WARNING, CURRENCY_WARNING)
-    }
     return this
   }
 
