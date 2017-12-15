@@ -74,7 +74,7 @@ checkout.setCurrency('BRL')
  */
 ```
 
-##Transaction
+## Transaction
 
 Consulta o status da transação. A versão atual possui apenas consulta por reference. *valor definido por `setReference` no checkout*
 
