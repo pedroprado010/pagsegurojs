@@ -1,6 +1,6 @@
 {
   "name": "pagsegurojs",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "integração com sistema de pagamentos Pagseguro",
   "keywords": ["pagseguro","promise"],
   "bugs": {
