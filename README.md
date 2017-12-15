@@ -78,6 +78,7 @@ checkout.setCurrency('BRL')
 
 Consulta o status da transação. A versão atual possui apenas consulta por [reference](https://dev.pagseguro.uol.com.br/documentacao/pagamento-online/pagamentos/consultando-por-codigo-de-referencia). *valor definido por `setReference` no checkout*
 
+### Exemplo
 ```javascript
 import { Transaction } from 'pagsegurojs'
 const transaction = new Transaction({
@@ -86,7 +87,6 @@ const transaction = new Transaction({
   sandbox: true,
 })
 
-### Exemplo
 
 transaction.setReference('REF00001')
   .queryTransaction()
