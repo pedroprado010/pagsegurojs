@@ -17,7 +17,7 @@ npm install pagsegurojs --save
 
 O checkout retorna o código que representa a transação no pagseguro. Pode ser usado em [pagamento padrão](https://dev.pagseguro.uol.com.br/documentacao/pagamento-online/pagamentos/pagamento-padrao) ou em [pagamento lightbox](https://dev.pagseguro.uol.com.br/documentacao/pagamento-online/pagamentos/pagamento-lightbox).
 
-###Exemplo
+### Exemplo
 
 ```javascript
 import { Checkout } from '../src/Checkout.babel.js'
