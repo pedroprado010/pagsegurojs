@@ -1,8 +1,7 @@
 src/
 node_modules/
+test/
 .git
-
 .gitignore
-gulpfile.babel.js
-test.js
 .babelrc
+gulpfile.babel.js

@@ -60,8 +60,6 @@ export class Checkout {
                  'https://ws.pagseguro.uol.com.br/v2/checkout?email='
     config.url += this.email + '&token=' + this.token
     config.data = this.xml + convert.js2xml({checkout: this.data},options)
-    console.log(config.url);
-    console.log(this.xml + convert.js2xml({checkout: this.data},options))
 
     return axios(config)
   }

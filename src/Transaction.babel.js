@@ -12,6 +12,7 @@ export class Transaction {
 
   setReference(ref) {
     this.reference = ref
+    return this
   }
 
   queryTransaction() {

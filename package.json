@@ -1,6 +1,6 @@
 {
   "name": "pagsegurojs",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "integração com sistema de pagamentos Pagseguro",
   "keywords": ["pagseguro","promise"],
   "bugs": {
@@ -8,8 +8,7 @@
   },
   "main": "./build/index.js",
   "scripts": {
-    "test": "npx babel-node ./test.js",
-    "build": "npx babel src --out-dir lib",
+    "test": "npx babel-node ./test/index.js",
     "prepublishOnly": "gulp"
   },
   "author": {
