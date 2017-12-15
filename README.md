@@ -20,7 +20,7 @@ O checkout retorna o código que representa a transação no pagseguro. Pode ser
 ### Exemplo
 
 ```javascript
-import { Checkout } from '../src/Checkout.babel.js'
+import { Checkout } from 'pagsegurojs'
 
 const checkout = new Checkout({
   email: 'exemplo@email.com',
@@ -76,15 +76,17 @@ checkout.setCurrency('BRL')
 
 ## Transaction
 
-Consulta o status da transação. A versão atual possui apenas consulta por reference. *valor definido por `setReference` no checkout*
+Consulta o status da transação. A versão atual possui apenas consulta por [reference](https://dev.pagseguro.uol.com.br/documentacao/pagamento-online/pagamentos/consultando-por-codigo-de-referencia). *valor definido por `setReference` no checkout*
 
 ```javascript
-import { Transaction } from '../src/Transaction.babel.js'
+import { Transaction } from 'pagsegurojs'
 const transaction = new Transaction({
   email: 'exemplo@email.com',
   token: 'XXXXXXXXXXXXXXXXX',
   sandbox: true,
 })
+
+### Exemplo
 
 transaction.setReference('REF00001')
   .queryTransaction()
@@ -93,28 +95,28 @@ transaction.setReference('REF00001')
 /*
  *  <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
  *  <transactionSearchResult>
- *  	<date>0000-00-00000:00:00.000-00:00</date>
- *  	<transactions>
- *  		<transaction>
- *  			<date>0000-00-00000:00:00.000-00:00</date>
- *  			<reference>REF00001</reference>
- *  			<code>FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF</code>
- *  			<type>1</type>
- *  			<status>3</status>
- *  			<paymentMethod>
- *  				<type>1</type>
- *  			</paymentMethod>
- *  			<grossAmount>30.00</grossAmount>
- *  			<discountAmount>0.00</discountAmount>
- *  			<feeAmount>10.00</feeAmount>
- *  			<netAmount>20.00</netAmount>
- *  			<extraAmount>0.00</extraAmount>
- *  			<lastEventDate>0000-00-00000:00:00.000-00:00</lastEventDate>
- *  	  </transaction>
- *	  </transactions>
- *	  <resultsInThisPage>1</resultsInThisPage>
- * 	  <currentPage>1</currentPage>
- *    <totalPages>1</totalPages>
+ *    <date>0000-00-00000:00:00.000-00:00</date>
+ *      <transactions>
+ *        <transaction>
+ *          <date>0000-00-00000:00:00.000-00:00</date>
+ *          <reference>REF00001</reference>
+ *          <code>FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF</code>
+ *          <type>1</type>
+ *          <status>3</status>
+ *          <paymentMethod>
+ *            <type>1</type>
+ *          </paymentMethod>
+ *          <grossAmount>30.00</grossAmount>
+ *          <discountAmount>0.00</discountAmount>
+ *          <feeAmount>10.00</feeAmount>
+ *          <netAmount>20.00</netAmount>
+ *          <extraAmount>0.00</extraAmount>
+ *          <lastEventDate>0000-00-00000:00:00.000-00:00</lastEventDate>
+ *        </transaction>
+ *      </transactions>
+ *      <resultsInThisPage>1</resultsInThisPage>
+ *      <currentPage>1</currentPage>
+ *      <totalPages>1</totalPages>
  *  </transactionSearchResult>
  */
 ```
