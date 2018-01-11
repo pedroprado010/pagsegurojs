@@ -6,8 +6,8 @@ export class Transaction {
     this.email = email
     this.token = token
     this.link = sandbox ?
-      'https://ws.sandbox.pagseguro.uol.com.br/v2/transactions?':
-      'https://ws.pagseguro.uol.com.br/v2/transactions?'
+      'ws.sandbox.pagseguro.uol.com.br/v2/transactions?':
+      'ws.pagseguro.uol.com.br/v2/transactions?'
   }
 
   setReference(ref) {

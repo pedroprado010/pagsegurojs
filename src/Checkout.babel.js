@@ -56,8 +56,8 @@ export class Checkout {
     const options = {compact: true}
 
     config.url = this.sandbox ?
-                 'https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=' :
-                 'https://ws.pagseguro.uol.com.br/v2/checkout?email='
+                 'ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=' :
+                 'ws.pagseguro.uol.com.br/v2/checkout?email='
     config.url += this.email + '&token=' + this.token
     config.data = this.xml + convert.js2xml({checkout: this.data},options)
 
