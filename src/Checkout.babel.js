@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export class Checkout {
   data = {items: []}
-  xml = '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+  xml = '<?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>'
 
   constructor({email, token, sandbox = false}) {
     this.email = email
@@ -56,8 +56,8 @@ export class Checkout {
     const options = {compact: true}
 
     config.url = this.sandbox ?
-                 'ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=' :
-                 'ws.pagseguro.uol.com.br/v2/checkout?email='
+                 'https://ws.sandbox.pagseguro.uol.com.br/v2/checkout?email=' :
+                 'https://ws.pagseguro.uol.com.br/v2/checkout?email='
     config.url += this.email + '&token=' + this.token
     config.data = this.xml + convert.js2xml({checkout: this.data},options)
 

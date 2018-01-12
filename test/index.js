@@ -1,16 +1,13 @@
 import { Checkout } from '../src/Checkout.babel.js'
 import { Transaction } from '../src/Transaction.babel.js'
+import {user, userSand} from './credentials'
 
-const checkout = new Checkout({
-  email: 'exemplo@email.com',
-  token: 'XXXXXXXXXXXXXXXXX',
-  sandbox: true,
-})
+const checkout = new Checkout(user)
 
 checkout.setCurrency('BRL')
   .setReference('REF00001')
   .addItem({
-    id: '00001',
+    id: '0001',
     description: 'Produto exemplo',
     amount: 1.99,
     quantity: 4,
@@ -24,15 +21,6 @@ checkout.setCurrency('BRL')
       areaCode: 35,
       number: 991234567,
     },
-    ip: '192.168.0.100',
-    documents: [
-      {
-        document: {
-          type: 'CPF',
-          value: '11111111111',
-        },
-      },
-    ],
   })
   .setShipping({
     type: 1, // PAC
@@ -42,7 +30,8 @@ checkout.setCurrency('BRL')
   .setRedirectURL('https://lojaexemplo.com.br/shop')
   .setNotificationURL('https://lojaexemplo.com.br/notify')
   .send()
-  .then((r)=>console.log(r.data))
+  .then(r => console.log(r.data))
+  .catch(e => console.log(e))
 
 /*
  * <?xml version="1.0" encoding="ISO-8859-1" standalone="yes"?>
